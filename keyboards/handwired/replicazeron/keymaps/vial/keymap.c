@@ -19,39 +19,39 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
     //  little  | ring       | middle | index   | 5way-dpad | -finger
-        KC_GRV,  KC_ESC,       KC_J,    KC_M,    KC_RIGHT,  // up
-        KC_T,    KC_3,         KC_4,    KC_R,    KC_ENT,    // forward
-        KC_X,    KC_LCTL,      KC_LCTL, KC_LALT, KC_DOWN,   // down
-        KC_LSFT, KC_SPC,       KC_C,    KC_F,    KC_LEFT,   // back 2
-        KC_LSFT, KC_6,         KC_Z,    KC_V,    KC_UP,     // back 1
-        KC_TAB,  TG(_SHOOTER), KC_I,    KC_B,    KC_P       // special
+        KC_GRV,  KC_ESC,       KC_J,    KC_M,    KC_RIGHT,  // right
+        KC_T,    KC_3,         KC_4,    KC_R,    KC_UP,    // up
+        KC_X,    KC_LCTL,      KC_LCTL, KC_LALT, KC_LEFT,   // left
+        KC_LSFT, KC_SPC,       KC_C,    KC_F,    KC_DOWN,   // down
+        KC_LSFT, KC_6,         KC_Z,    KC_V,    KC_ENT,     // enter
+        KC_TAB,  TG(_SHOOTER), KC_I,    KC_B,    JOYMODE    // special
     //  ^side_l | ^case      | ^thumb | ^side_r | ^analog click <= special row mapping
     ),
 
     [_SHOOTER] = LAYOUT(
-        KC_NO, KC_NO,     KC_NO, KC_NO, KC_RIGHT,
-        KC_NO, KC_NO,     KC_NO, KC_NO, KC_ENT,
-        KC_NO, KC_NO,     KC_NO, KC_NO, KC_DOWN,
-        KC_NO, KC_NO,     KC_NO, KC_NO, KC_LEFT,
-        KC_NO, KC_NO,     KC_NO, KC_NO, KC_UP,
-        KC_NO, TG(_MISC), KC_NO, KC_NO, KC_P
+        KC_NO, KC_NO,     KC_NO, KC_NO, KC_RIGHT,  // right
+        KC_NO, KC_NO,     KC_NO, KC_NO, KC_UP,    // up
+        KC_NO, KC_NO,     KC_NO, KC_NO, KC_LEFT,   // left
+        KC_NO, KC_NO,     KC_NO, KC_NO, KC_DOWN,   // down
+        KC_NO, KC_NO,     KC_NO, KC_NO, KC_ENT,     // enter
+        KC_NO, TG(_MISC), KC_NO, KC_NO, JOYMODE    // special
     ),
 
     [_MISC] = LAYOUT(
-        KC_NO, KC_NO,         KC_NO, KC_NO, KC_RIGHT,
-        KC_NO, KC_NO,         KC_NO, KC_NO, KC_ENT,
-        KC_NO, KC_NO,         KC_NO, KC_NO, KC_DOWN,
-        KC_NO, KC_NO,         KC_NO, KC_NO, KC_LEFT,
-        KC_NO, KC_NO,         KC_NO, KC_NO, KC_UP,
-        KC_NO, TG(_SETTINGS), KC_NO, KC_NO, KC_P
+        KC_NO, KC_NO,         KC_NO, KC_NO, KC_RIGHT,  // right
+        KC_NO, KC_NO,         KC_NO, KC_NO, KC_UP,    // up
+        KC_NO, KC_NO,         KC_NO, KC_NO, KC_LEFT,   // left
+        KC_NO, KC_NO,         KC_NO, KC_NO, KC_DOWN,   // down
+        KC_NO, KC_NO,         KC_NO, KC_NO, KC_ENT,     // enter
+        KC_NO, TG(_SETTINGS), KC_NO, KC_NO, JOYMODE    // special
     ),
 
     [_SETTINGS] = LAYOUT(
-        RGB_M_P, RGB_M_B,   RGB_M_K, RGB_M_T,  KC_RIGHT,
-        KC_NO,   RGB_SAI,   RGB_VAI, RGB_HUI,  KC_ENT,
-        RGB_TOG, KC_NO,     KC_NO,   KC_NO  ,  KC_DOWN,
-        EE_CLR,  RGB_SAD,   RGB_VAD, RGB_HUD,  KC_LEFT,
-        QK_BOOT, AUTORUN,   JOYMODE, KC_V,     KC_UP,
-        RGB_MOD, TO(_BASE), KC_NO,   RGB_RMOD, KC_P
+        RGB_M_P, RGB_M_B,   RGB_M_K, RGB_M_T,  KC_RIGHT,  // right
+        KC_NO,   RGB_SAI,   RGB_VAI, RGB_HUI,  KC_UP,    // up
+        RGB_TOG, KC_NO,     KC_NO,   KC_NO  ,  KC_LEFT,   // left
+        EE_CLR,  RGB_SAD,   RGB_VAD, RGB_HUD,  KC_DOWN,   // down
+        QK_BOOT, AUTORUN,   JOYMODE, KC_V,     KC_ENT,     // enter
+        RGB_MOD, TO(_BASE), KC_NO,   RGB_RMOD, JOYMODE    // special
     )
 };
