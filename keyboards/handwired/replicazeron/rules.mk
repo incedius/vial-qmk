@@ -1,7 +1,7 @@
 JOYSTICK_ENABLE = yes
 OLED_ENABLE = yes
 
-LEDS_ENABLE = yes
+
 THUMBSTICK_ENABLE = yes
 
 LTO_ENABLE = yes
