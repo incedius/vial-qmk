@@ -1,0 +1,32 @@
+/* Copyright 2022 9R 
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#pragma once
+
+#include_next <mcuconf.h>
+
+//enable i2c for OLED
+#undef RP_I2C_USE_I2C0
+#define RP_I2C_USE_I2C0 TRUE
+
+//#undef RP_PWM_USE_PWM0
+//#define RP_PWM_USE_PWM0 TRUE
+//#undef RP_PWM_USE_PWM4
+//#define RP_PWM_USE_PWM4 TRUE
+
+//enable ADC for thumbstick
+#undef RP_ADC_USE_ADC1
+#define RP_ADC_USE_ADC1 TRUE

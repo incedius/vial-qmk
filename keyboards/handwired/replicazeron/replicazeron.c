@@ -15,6 +15,7 @@
  */
 
 #include "replicazeron.h"
+#include "analog.h"
 
 controller_state_t controller_state;
 
