@@ -15,7 +15,7 @@
         "rows": ["GP16", "GP17", "GP18", "GP19", "GP20", "GP21"]
     },
     "rgblight": {
-        "led_count": 6
+        "led_count": 8
         "animations": {
             "breathing": true,
             "knight": true,

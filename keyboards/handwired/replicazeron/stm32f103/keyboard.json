@@ -6,7 +6,7 @@
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
-        "rgblight": false
+        "rgblight": true
     },
     "matrix_pins": {
         "cols": ["A7", "A6", "A5", "A4", "B4"],

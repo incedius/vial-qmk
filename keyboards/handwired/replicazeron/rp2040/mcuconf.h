@@ -21,12 +21,3 @@
 //enable i2c for OLED
 #undef RP_I2C_USE_I2C0
 #define RP_I2C_USE_I2C0 TRUE
-
-//#undef RP_PWM_USE_PWM0
-//#define RP_PWM_USE_PWM0 TRUE
-//#undef RP_PWM_USE_PWM4
-//#define RP_PWM_USE_PWM4 TRUE
-
-//enable ADC for thumbstick
-#undef RP_ADC_USE_ADC1
-#define RP_ADC_USE_ADC1 TRUE

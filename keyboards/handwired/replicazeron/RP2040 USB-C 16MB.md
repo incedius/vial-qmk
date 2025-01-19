@@ -7,8 +7,8 @@ I2C1_SDA GP0
 I2C1_SCL GP1
 
 Joystick:
-GP26 axis0 red 
-GP27 axis1 yellow
+GP27 axis0 X yellow
+GP28 axis1 Y red
 
 Leds:
 LED0 GP2

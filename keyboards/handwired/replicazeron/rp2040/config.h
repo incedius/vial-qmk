@@ -20,6 +20,8 @@
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_TIMEOUT 200U // Timeout window in ms in which the double tap can occur.
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET_LED GP25 // Specify a optional status led by GPIO number which blinks when entering the bootloader
 
+#define FORCE_NKRO
+
 /* I2C Config */
 #define I2C_DRIVER I2CD1
 #define I2C1_SDA_PIN GP2
@@ -28,9 +30,6 @@
 //#define STATUS_LED_A_PIN B13
 //#define STATUS_LED_B_PIN B12
 
-//#define LED_PIN_ON_STATE 0
-//#define LED_CAPS_LOCK_PIN GP23
-//#define LED_SCROLL_LOCK_PIN GP3
-
-#define ANALOG_AXIS_PIN_X GP26
-#define ANALOG_AXIS_PIN_Y GP27
+#define JOYSTICK_DEBUG
+#define ANALOG_AXIS_PIN_X GP27
+#define ANALOG_AXIS_PIN_Y GP28
