@@ -76,16 +76,16 @@ void thumbstick(controller_state_t controller_state) {
     // Update WASD state depending on thumbstick position
     // if thumbstick out of of deadzone
     if (thumbstick_polar_position.distance >= _DEADZONE) {
-        wasd_state.w = update_keystate(0, 90, thumbstick_polar_position.angle);
+        wasd_state.s = update_keystate(0, 90, thumbstick_polar_position.angle);
         // A angle:  45 - 180
         wasd_state.a = update_keystate(45, 181, thumbstick_polar_position.angle);
         // S angle: 135 - 270
-        wasd_state.s = update_keystate(135, 270, thumbstick_polar_position.angle);
+        wasd_state.w = update_keystate(135, 270, thumbstick_polar_position.angle);
         // D angle: 225 - 359
         wasd_state.d = update_keystate(225, 359, thumbstick_polar_position.angle);
 
-        if (!wasd_state.w ) {
-            wasd_state.w = update_keystate(315, 360, thumbstick_polar_position.angle);
+        if (!wasd_state.s ) {
+            wasd_state.s = update_keystate(315, 360, thumbstick_polar_position.angle);
         }
     } else {
         //reset WASD state when in _DEADZONE
