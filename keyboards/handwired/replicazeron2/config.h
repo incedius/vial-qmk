@@ -29,7 +29,7 @@
 #define JOYSTICK_AXIS_COUNT 2
 #define JOYSTICK_AXIS_RESOLUTION 10
 
-#define _DEADZONE  20  // 0 to _SHIFTZONE-1
+#define _DEADZONE  50  // 0 to _SHIFTZONE-1
 #define _SHIFTZONE 350  // _DEADZONE+1 to 600
 #define _THUMBSTICK_ROTATION 100 //degrees, adjusts forward direction
 
