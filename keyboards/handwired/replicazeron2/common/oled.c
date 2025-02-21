@@ -18,6 +18,7 @@
 #include "oled_driver.h"
 #include "progmem.h"
 #include "util.h"
+#include "print.h"
 
 uint8_t shiftbits =32 ;
 
@@ -62,6 +63,17 @@ void draw_thumb_debug(thumbstick_polar_position_t thumbstick_polar_position) {
     //print registered key codes
     oled_write_P(PSTR("Keycodes: "), false);
     draw_wasd_key( wasd_state );
+
+    #ifdef CONSOLE_ENABLE
+    uprintf("X: %i, Y: %i\n", xPos, yPos);
+    if (xPos<xMin) xMin=xPos;
+    if (yPos<yMin) yMin=yPos;
+    if (xPos>xMax) xMax=xPos;
+    if (yPos>yMax) yMax=yPos;
+
+    uprintf("Xmin: %i, Ymin: %i\n", xMin, yMin);
+    uprintf("Xmax: %i, Ymax: %i\n", xMax, yMax);
+    #endif 
 }
 
 //////////// draw OLED output //////////////

@@ -61,6 +61,12 @@ void thumbstick(controller_state_t controller_state) {
     xPos = joystick_state.axes[0];
     yPos = joystick_state.axes[1];
 
+    if(!minMaxSet) {
+        xMin  = xMax = xPos;
+        yMin = yMax = yPos;
+        minMaxSet = true;
+    }
+
     thumbstick_polar_position = get_thumbstick_polar_position(xPos, yPos);
 
 #ifdef THUMBSTICK_DEBUG

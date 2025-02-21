@@ -21,17 +21,16 @@ controller_state_t controller_state;
 
 #ifdef JOYSTICK_ENABLE
 joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
-    JOYSTICK_AXIS_IN(ANALOG_AXIS_PIN_X , 0, 512, 1023),
-    JOYSTICK_AXIS_IN(ANALOG_AXIS_PIN_Y , 0, 512, 1023)
+    JOYSTICK_AXIS_IN(ANALOG_AXIS_PIN_X , _Xmin, _Xrest, _Xmax),
+    JOYSTICK_AXIS_IN(ANALOG_AXIS_PIN_Y , _Ymin, _Yrest,  _Ymax)
 };
-#endif
 
 #ifdef THUMBSTICK_ENABLE
 void housekeeping_task_kb(void) {
     if (controller_state.wasdMode) {
         thumbstick(controller_state);
     }
-}
+};
 #endif
 #ifdef RGBINDICATORS
 // Define layers
@@ -96,7 +95,8 @@ void keyboard_post_init_kb(void) {
     init_leds();
 #endif // LEDS_ENABLE
 
-#ifdef THUMBSTICK_ENABLE
+#ifdef THUMBSTICK_ENABLE 
+    minMaxSet = false;
     init_wasd_state();
 #endif // THUMBSTICK_ENABLE
 

@@ -22,6 +22,13 @@
 int16_t xPos;
 int16_t yPos;
 
+int16_t xMin;
+int16_t xMax;
+int16_t yMin;
+int16_t yMax;
+
+bool minMaxSet;
+
 typedef struct {
     uint16_t angle;
     uint16_t  distance;
