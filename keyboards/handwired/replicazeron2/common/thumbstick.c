@@ -76,16 +76,16 @@ void thumbstick(controller_state_t controller_state) {
     // Update WASD state depending on thumbstick position
     // if thumbstick out of of deadzone
     if (thumbstick_polar_position.distance >= _DEADZONE) {
-        wasd_state.s = update_keystate(0, 90, thumbstick_polar_position.angle);
+        wasd_state.w = update_keystate(0, 90, thumbstick_polar_position.angle);
         // A angle:  45 - 180
-        wasd_state.a = update_keystate(45, 181, thumbstick_polar_position.angle);
+        wasd_state.d = update_keystate(45, 181, thumbstick_polar_position.angle);
         // S angle: 135 - 270
-        wasd_state.w = update_keystate(135, 270, thumbstick_polar_position.angle);
+        wasd_state.s = update_keystate(135, 270, thumbstick_polar_position.angle);
         // D angle: 225 - 359
-        wasd_state.d = update_keystate(225, 359, thumbstick_polar_position.angle);
+        wasd_state.a = update_keystate(225, 359, thumbstick_polar_position.angle);
 
-        if (!wasd_state.s ) {
-            wasd_state.s = update_keystate(315, 360, thumbstick_polar_position.angle);
+        if (!wasd_state.w ) {
+            wasd_state.w = update_keystate(315, 360, thumbstick_polar_position.angle);
         }
     } else {
         //reset WASD state when in _DEADZONE
@@ -95,11 +95,11 @@ void thumbstick(controller_state_t controller_state) {
 #ifdef THUMBSTICK_DEBUG
     dprintf("w: %2d a: %2d s: %2d d: %2d\n", wasd_state.w, wasd_state.a, wasd_state.s, wasd_state.d);
 #endif
-
-    update_keycode(KC_W, wasd_state.w, last_wasd_state.w);
-    update_keycode(KC_A, wasd_state.a, last_wasd_state.a);
-    update_keycode(KC_S, wasd_state.s, last_wasd_state.s);
-    update_keycode(KC_D, wasd_state.d, last_wasd_state.d);
+    uint8_t slayer = 3;
+    update_keycode(keymap_key_to_keycode(slayer, (keypos_t){.row = 3, .col = 4}), wasd_state.w, last_wasd_state.w);
+    update_keycode(keymap_key_to_keycode(slayer, (keypos_t){.row = 2, .col = 4}), wasd_state.a, last_wasd_state.a);
+    update_keycode(keymap_key_to_keycode(slayer, (keypos_t){.row = 1, .col = 4}), wasd_state.s, last_wasd_state.s);
+    update_keycode(keymap_key_to_keycode(slayer, (keypos_t){.row = 4, .col = 4}), wasd_state.d, last_wasd_state.d);
 
     last_wasd_state = wasd_state ;
 
