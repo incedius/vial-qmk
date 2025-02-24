@@ -21,6 +21,7 @@ controller_state_t controller_state;
 
 #ifdef JOYSTICK_ENABLE
 joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
+    //flip the min and max values if the joystick inputs are flipped
     JOYSTICK_AXIS_IN(ANALOG_AXIS_PIN_X , _Xmin, _Xrest, _Xmax),
     JOYSTICK_AXIS_IN(ANALOG_AXIS_PIN_Y , _Ymax, _Yrest,  _Ymin)
 };

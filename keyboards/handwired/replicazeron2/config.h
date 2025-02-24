@@ -31,7 +31,7 @@
 
 #define _DEADZONE  50  // 0 to _SHIFTZONE-1
 #define _SHIFTZONE 350  // _DEADZONE+1 to 600
-#define _THUMBSTICK_ROTATION 100 //degrees, adjusts forward direction
+#define _THUMBSTICK_ROTATION 80 //degrees, adjusts forward direction
 
 #define _Xrest 570
 #define _Yrest 570
