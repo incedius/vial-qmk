@@ -95,11 +95,10 @@ void thumbstick(controller_state_t controller_state) {
 #ifdef THUMBSTICK_DEBUG
     dprintf("w: %2d a: %2d s: %2d d: %2d\n", wasd_state.w, wasd_state.a, wasd_state.s, wasd_state.d);
 #endif
-    uint8_t slayer = 3;
-    update_keycode(keymap_key_to_keycode(slayer, (keypos_t){.row = 3, .col = 4}), wasd_state.w, last_wasd_state.w);
-    update_keycode(keymap_key_to_keycode(slayer, (keypos_t){.row = 2, .col = 4}), wasd_state.a, last_wasd_state.a);
-    update_keycode(keymap_key_to_keycode(slayer, (keypos_t){.row = 1, .col = 4}), wasd_state.s, last_wasd_state.s);
-    update_keycode(keymap_key_to_keycode(slayer, (keypos_t){.row = 4, .col = 4}), wasd_state.d, last_wasd_state.d);
+    update_keycode(keymap_key_to_keycode(controller_state.highestActiveLayer, (keypos_t){.row = 6, .col = 3}), wasd_state.w, last_wasd_state.w);
+    update_keycode(keymap_key_to_keycode(controller_state.highestActiveLayer, (keypos_t){.row = 6, .col = 2}), wasd_state.a, last_wasd_state.a);
+    update_keycode(keymap_key_to_keycode(controller_state.highestActiveLayer, (keypos_t){.row = 6, .col = 1}), wasd_state.s, last_wasd_state.s);
+    update_keycode(keymap_key_to_keycode(controller_state.highestActiveLayer, (keypos_t){.row = 6, .col = 4}), wasd_state.d, last_wasd_state.d);
 
     last_wasd_state = wasd_state ;
 

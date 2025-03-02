@@ -24,7 +24,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_X,    KC_LCTL,      KC_LCTL, KC_LALT, KC_LEFT,  KC_NO,  // left
         KC_LSFT, KC_SPC,       KC_C,    KC_F,    KC_DOWN,  KC_NO,  // down
         KC_LSFT, KC_6,         KC_Z,    KC_V,    KC_ENT,   KC_NO,  // enter
-        KC_TAB,  TG(_SHOOTER), KC_I,    KC_B,    JOYMODE,  KC_NO  // special
+        KC_TAB,  TG(_SHOOTER), KC_I,    KC_B,    JOYMODE,  KC_NO,  // special
+        KC_NO, KC_NO,         KC_NO, KC_NO, KC_NO,   KC_NO // dummy
     //  ^side_l | ^case      | ^thumb | ^side_r         | ^analog click <= special row mapping
     ),
 
@@ -34,7 +35,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_NO, KC_NO,     KC_NO, KC_NO, KC_LEFT,  KC_NO,  // left
         KC_NO, KC_NO,     KC_NO, KC_NO, KC_DOWN,  KC_NO,  // down
         KC_NO, KC_NO,     KC_NO, KC_NO, KC_ENT,   KC_NO,  // enter
-        KC_NO, TG(_MISC), KC_NO, KC_NO, JOYMODE,  KC_NO  // special
+        KC_NO, TG(_MISC), KC_NO, KC_NO, JOYMODE,  KC_NO,  // special
+        KC_NO, KC_NO,         KC_NO, KC_NO, KC_NO,   KC_NO // dummy
     ),
 
     [_MISC] = LAYOUT(
@@ -43,7 +45,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_NO, KC_NO,         KC_NO, KC_NO, KC_LEFT,  KC_NO,  // left
         KC_NO, KC_NO,         KC_NO, KC_NO, KC_DOWN,  KC_NO,  // down
         KC_NO, KC_NO,         KC_NO, KC_NO, KC_ENT,   KC_NO,  // enter
-        KC_NO, TG(_SETTINGS), KC_NO, KC_NO, JOYMODE,  KC_NO  // special
+        KC_NO, TG(_SETTINGS), KC_NO, KC_NO, JOYMODE,  KC_NO,  // special
+        KC_NO, KC_NO,         KC_NO, KC_NO, KC_NO,   KC_NO // dummy
     ),
 
     [_SETTINGS] = LAYOUT(
@@ -52,6 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RGB_TOG, KC_0,      KC_S,    KC_7  ,   KC_LEFT,  KC_3,  // left
         EE_CLR,  KC_A,   RGB_VAD,    KC_4 ,  KC_DOWN,  RGB_VAD,  // down
         KC_W, AUTORUN,   JOYMODE, KC_V,     RGB_HUD,   KC_D,  // enter
-        RGB_MOD, TO(_BASE), KC_9,    RGB_RMOD, JOYMODE,  KC_6  // special
+        RGB_MOD, TO(_BASE), KC_9,    RGB_RMOD, JOYMODE,  KC_6,  // special
+        KC_NO, KC_NO,         KC_NO, KC_NO, KC_NO,   KC_NO // dummy
     )
 };
