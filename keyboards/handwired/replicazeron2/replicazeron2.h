@@ -36,6 +36,7 @@ enum kb_layers {
     _BASE,
     _SHOOTER,
     _MISC,
+    _JOYSTICK,
     _SETTINGS,
 };
 

@@ -89,6 +89,10 @@ void draw_oled(controller_state_t controller_state) {
             oled_write_ln_P(PSTR("Misc"), false);
             break;
 
+        case _JOYSTICK:
+            oled_write_ln_P(PSTR("Joystick"), false);
+            break;
+
         case _SETTINGS:
             oled_write_ln_P(PSTR("Settings"), false);
             break;

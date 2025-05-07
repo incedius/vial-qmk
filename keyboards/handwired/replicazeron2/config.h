@@ -25,11 +25,11 @@
 #define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF
 
 /* joystick configuration */
-#define JOYSTICK_BUTTON_COUNT 0
+#define JOYSTICK_BUTTON_COUNT 32
 #define JOYSTICK_AXIS_COUNT 2
 #define JOYSTICK_AXIS_RESOLUTION 10
 
-#define _DEADZONE  50  // 0 to _SHIFTZONE-1
+#define _DEADZONE 60  // 0 to _SHIFTZONE-1
 #define _SHIFTZONE 350  // _DEADZONE+1 to 600
 #define _THUMBSTICK_ROTATION 80 //degrees, adjusts forward direction
 
@@ -42,3 +42,5 @@
 
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
+
+#define DYNAMIC_KEYMAP_LAYER_COUNT 5

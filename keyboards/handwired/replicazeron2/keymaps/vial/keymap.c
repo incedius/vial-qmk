@@ -45,7 +45,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_NO, KC_NO,         KC_NO, KC_NO, KC_LEFT,  KC_NO,  // left
         KC_NO, KC_NO,         KC_NO, KC_NO, KC_DOWN,  KC_NO,  // down
         KC_NO, KC_NO,         KC_NO, KC_NO, KC_ENT,   KC_NO,  // enter
-        KC_NO, TG(_SETTINGS), KC_NO, KC_NO, JOYMODE,  KC_NO,  // special
+        KC_NO, TG(_JOYSTICK), KC_NO, KC_NO, JOYMODE,  KC_NO,  // special
+        KC_NO, KC_NO,         KC_NO, KC_NO, KC_NO,   KC_NO // dummy
+    ),
+
+    [_JOYSTICK] = LAYOUT(
+        //  little  | ring       | middle | index           | 5way-dpad | -finger
+        JS_0,    JS_1,         JS_2,    JS_3,    KC_RIGHT, JS_4,  // right
+        JS_5,    JS_6,         JS_7,    JS_8,    KC_UP,    JS_9,  // up
+        JS_10,   JS_11,        JS_12,   JS_13,   KC_LEFT,  JS_14,  // left
+        JS_15,   JS_16,        JS_17,   JS_18,   KC_DOWN,  JS_19,  // down
+        JS_20,   JS_21,        JS_22,   JS_23,   KC_ENT,   JS_24,  // enter
+        JS_25, TG(_SETTINGS),  JS_26,   JS_27,   JOYMODE,  JS_28,  // special
         KC_NO, KC_NO,         KC_NO, KC_NO, KC_NO,   KC_NO // dummy
     ),
 
