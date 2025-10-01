@@ -11,7 +11,7 @@ VPATH += keyboards/handwired/replicazeron2/common
 
 # redirect compilation against "handwired/replicazeron" to the stm32 variant
 #DEFAULT_FOLDER = handwired/replicazeron/stm32f103
-DEFAULT_FOLDER = handwired/replicazeron2/rp2040
+#DEFAULT_FOLDER = handwired/replicazeron2/rp2040
 
 # add below lines for rp2040
 WS2812_DRIVER = vendor

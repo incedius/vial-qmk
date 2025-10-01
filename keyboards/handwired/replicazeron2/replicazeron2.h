@@ -17,7 +17,6 @@
 #pragma once
 
 #include "quantum.h"
-
 #include "state.h"
 
 #ifdef LEDS_ENABLE

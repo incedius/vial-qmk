@@ -117,3 +117,6 @@ compile_commands.json
 .clangd/
 .cache/
 .vscode/settings.json
+*.vil
+buildReplicaZeron.sh
+remapMatrix.py
